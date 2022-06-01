@@ -18,9 +18,9 @@
       "location": "D2",
       "road": true,
       "opponent": "Cranks",
-      "outcome": false,
-      "score": "",
-      "played": false
+      "outcome": true,
+      "score": "18-16",
+      "played": true
     },
     {
       "month": "June",
