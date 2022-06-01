@@ -1,0 +1,13 @@
+body {
+  background: $colour-blue;
+
+  #page-container {
+    font-family: $font-family-serif;
+
+    .main-content {
+      max-width: 768px;
+      margin: 0 auto;
+      // padding: 12px;
+    }
+  }
+}
