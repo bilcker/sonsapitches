@@ -1,0 +1,137 @@
+{
+    "extends": "stylelint-config-standard",
+    "plugins": [
+      "stylelint-order", 
+      "stylelint-scss", 
+      "stylelint-images", 
+      "stylelint-declaration-strict-value"
+    ],
+    "rules": {
+      "at-rule-no-unknown": [true, {
+        "ignoreAtRules": ["include", "extend", "import", "each", "if", "mixin", "function"]
+      }],
+      "at-rule-empty-line-before": [ "always", {
+        except: [
+          "after-same-name",
+          "blockless-after-same-name-blockless",
+          "blockless-after-blockless",
+          "inside-block"
+        ],
+        ignore: ["after-comment"],
+      } ],
+      "at-rule-no-vendor-prefix": true,
+      "block-no-empty": true,
+      "color-hex-case": ["upper", {
+        "message": "Uppercase characters are used to keep vhs looking files neat and tidy" 
+      }],
+      "color-hex-length": ["long", {
+         "message": "By using the full hex code developers can find and use them easier"
+      }],
+      "color-no-invalid-hex": true,
+      "color-named": "never",
+      "declaration-property-value-blacklist": {
+          "border": ["none"],
+          "border-top": ["none"],
+          "border-right": ["none"],
+          "border-bottom": ["none"],
+          "border-left": ["none"]
+      },
+      "declaration-empty-line-before": ["always", {
+        "except": [
+          "first-nested",
+          "after-comment",
+          "after-declaration"
+        ],
+      }],
+      "scale-unlimited/declaration-strict-value": [["/color/", "z-index", "font-size", "border", "font", "margin", "padding"], {
+        "ignoreKeywords": ["transparent", "0", "inherit", "none", "auto"]
+      }],
+      "order/order": [
+        [
+          {
+            type: "at-rule",
+            name: "extend"
+          },
+          {
+            type: "at-rule",
+            name: "include"
+          },
+          {
+            type: "at-rule",
+            name: "media"
+          },
+          {
+            type: "rule",
+            selector: /^&:\w/
+          },
+          {
+            type: "rule",
+            selector: /^&/
+          },
+          "custom-properties",
+          "declarations",
+          "dollar-variables",
+          "declarations",
+          "rules"
+        ],
+        disableFix: false,
+      ],
+      "order/properties-order":[
+        {
+          properties: [
+              "width",
+              "max-width",
+              "min-width",
+              "height",
+              "max-height",
+              "min-width",
+              "margin",
+              "padding",
+              "flex",
+              "position",
+              "transform",
+              "z-index",
+              "overflow",
+              "transition",
+              "opacity",
+              "display",
+              "font-family",
+              "content",
+              "font-size",
+              "text-align",
+              "background",
+              "background-image",
+              "border",
+              "border-radius",
+              "border-color",
+              "border-width",
+              "border-style",
+              "text-shadow",
+              "box-shadow",
+          ]
+        }
+      ],
+      "images/broken": true,
+      "images/prefer-data-uri": 256,
+      "no-descending-specificity": null,
+      "unit-whitelist": ["rem", "%", "px", "ms", "deg", "em"],
+      "scss/at-function-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
+      "scss/at-import-no-partial-leading-underscore": true,
+      "scss/at-import-partial-extension-blacklist": ["scss"],
+      "scss/at-mixin-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
+      "scss/at-rule-no-unknown": true,
+      "scss/dollar-variable-colon-space-after": "always",
+      "scss/dollar-variable-colon-space-before": "never",
+      "scss/dollar-variable-pattern": "^[_]?[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
+      "scss/percent-placeholder-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
+      "scss/selector-no-redundant-nesting-selector": true,
+      "selector-class-pattern": [
+        "^[a-z0-9\\-]+$",
+        {
+          "message":
+            "Selector should be written in lowercase with hyphens (selector-class-pattern)"
+        }
+      ],
+      "selector-pseudo-element-colon-notation": "single",
+    },
+  }

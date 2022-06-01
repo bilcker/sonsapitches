@@ -1,0 +1,41 @@
+#page-container {
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+    color: $colour-white;
+  }
+
+  h1 {
+    a {
+      @include position(relative);
+
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      margin-bottom: $size-base;
+      overflow: hidden;
+      display: block;
+      background: url(../images/sp-logo.svg) center no-repeat;
+
+      span {
+        @include position(absolute, $left:-9999px);
+      }
+    }
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-bottom: $size-base;
+    font-weight: bold;
+  }
+
+  h3 {
+    @include breakpoint(sm) {
+      font-size: 22px;
+    }
+
+    font-size: 20px;
+    margin-bottom: $size-base;
+  }
+}

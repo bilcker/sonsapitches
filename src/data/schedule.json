@@ -1,0 +1,158 @@
+{
+  "schedule": [
+    {
+      "month": "May",
+      "day": "18",
+      "time": "8: 00",
+      "location": "D1",
+      "road": false,
+      "opponent": "Purple Cobras.",
+      "outcome": true,
+      "score": "18-17",
+      "played": true
+    },
+    {
+      "month": "May",
+      "day": "25",
+      "time": "8:00",
+      "location": "D2",
+      "road": true,
+      "opponent": "Cranks",
+      "outcome": false,
+      "score": "",
+      "played": false
+    },
+    {
+      "month": "June",
+      "day": "01",
+      "time": "N/A",
+      "location": "Home",
+      "road": false,
+      "opponent": "Week Off",
+      "outcome": false,
+      "score": "",
+      "played": false
+    },
+    {
+      "month": "June",
+      "day": "08",
+      "time": "9:30",
+      "location": "D1",
+      "road": true,
+      "opponent": "Gords",
+      "outcome": false,
+      "score": "",
+      "played": false
+    },
+    {
+      "month": "June",
+      "day": "15",
+      "time": "8:00",
+      "location": "D1",
+      "road": true,
+      "opponent": "Sportin Wood",
+      "outcome": false,
+      "score": "",
+      "played": false
+    },
+    {
+      "month": "June",
+      "day": "22",
+      "time": "9:30",
+      "location": "D1",
+      "road": false,
+      "opponent": "Wolverines",
+      "outcome": false,
+      "score": "",
+      "played": false
+    },
+    {
+      "month": "June",
+      "day": "29",
+      "time": "8:00",
+      "location": "D2",
+      "road": false,
+      "opponent": "Rum Runners",
+      "outcome": false,
+      "score": "",
+      "played": false
+    },
+    {
+      "month": "July",
+      "day": "6",
+      "time": "8:00",
+      "location": "D1",
+      "road": true,
+      "opponent": "Purple Cobras",
+      "outcome": false,
+      "score": "",
+      "played": false
+    },
+    {
+      "month": "July",
+      "day": "13",
+      "time": "8:00",
+      "location": "D2",
+      "road": false,
+      "opponent": "Cranks",
+      "outcome": false,
+      "score": "",
+      "played": false
+    },
+    {
+      "month": "July",
+      "day": "20",
+      "time": "N/A",
+      "location": "Home",
+      "road": false,
+      "opponent": "Week Off",
+      "outcome": false,
+      "score": "",
+      "played": false
+    },
+    {
+      "month": "July",
+      "day": "27",
+      "time": "9:30",
+      "location": "D1",
+      "road": false,
+      "opponent": "Gords",
+      "outcome": false,
+      "score": "",
+      "played": false
+    },
+    {
+      "month": "August",
+      "day": "03",
+      "time": "8:00",
+      "location": "D1",
+      "road": false,
+      "opponent": "Sportin Wood",
+      "outcome": false,
+      "score": "",
+      "played": false
+    },
+    {
+      "month": "August",
+      "day": "10",
+      "time": "9:30",
+      "location": "D1",
+      "road": true,
+      "opponent": "Wolverines",
+      "outcome": false,
+      "score": "",
+      "played": false
+    },
+    {
+      "month": "August",
+      "day": "17",
+      "time": "8:00",
+      "location": "D2",
+      "road": true,
+      "opponent": "Rum Runners",
+      "outcome": false,
+      "score": "",
+      "played": false
+    }
+  ]
+}
