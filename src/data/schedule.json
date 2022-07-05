@@ -63,8 +63,8 @@
       "road": false,
       "opponent": "Wolverines",
       "outcome": false,
-      "score": "",
-      "played": false
+      "score": "9-9",
+      "played": true
     },
     {
       "month": "June",
@@ -73,9 +73,9 @@
       "location": "D2",
       "road": false,
       "opponent": "Rum Runners",
-      "outcome": false,
-      "score": "",
-      "played": false
+      "outcome": true,
+      "score": "18-5",
+      "played": true
     },
     {
       "month": "July",

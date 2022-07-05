@@ -1,8 +1,11 @@
 <template>
   <div class="sp-schedule">
+    <div class="sp-record">
+      
+    </div>
     <div class="sp-game" v-for="(game, i) in games" :key="i">
 
-      <div class="sp-game-wrap" :class="game.played && game.outcome ? 'game-won' : game.played && !game.outcome ? 'game-lost' : ''">
+      <div class="sp-game-wrap" :class="gameResult(game)">
 
         <div v-if="game.played" class="sp-outcome">
             <span class="sp-outcome-score" v-html="game.score" />
@@ -39,9 +42,20 @@ export default {
     }
   },
   methods: {
+    scoreOne (obj) {
+      return obj.score.split('-')[0]
+    },
+    scoreTwo (obj) {
+      return obj.score.split('-')[1]
+    },
     homeOrAway (obj) {
       if (obj.road) return `@  ${obj.opponent}`
       return obj.opponent
+    },
+    gameResult (obj) {
+      if (this.scoreOne(obj) === this.scoreTwo(obj)) return 'game-tie'
+      else if (obj.played && obj.outcome) return 'game-won'
+      else if (obj.played && !obj.outcome) return 'game-lost'
     }
   }
 };
@@ -82,6 +96,14 @@ export default {
 
         .sp-team {
           .sp-team-name { background: darken($colour-red, 30%); }
+        }
+      }
+
+      &.game-tie {
+        background: $colour-yellow;
+
+        .sp-team {
+          .sp-team-name { background: darken($colour-yellow, 30%); }
         }
       }
 
