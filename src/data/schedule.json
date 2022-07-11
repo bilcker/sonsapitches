@@ -41,8 +41,8 @@
       "road": true,
       "opponent": "Gords",
       "outcome": false,
-      "score": "",
-      "played": false
+      "score": "9-9",
+      "played": true
     },
     {
       "month": "June",
@@ -84,9 +84,9 @@
       "location": "D1",
       "road": true,
       "opponent": "Purple Cobras",
-      "outcome": false,
-      "score": "",
-      "played": false
+      "outcome": true,
+      "score": "18-3",
+      "played": true
     },
     {
       "month": "July",

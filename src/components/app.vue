@@ -1,8 +1,5 @@
 <template>
   <div class="sp-schedule">
-    <div class="sp-record">
-      
-    </div>
     <div class="sp-game" v-for="(game, i) in games" :key="i">
 
       <div class="sp-game-wrap" :class="gameResult(game)">
