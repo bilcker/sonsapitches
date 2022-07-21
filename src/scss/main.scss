@@ -1,12 +1,12 @@
 /* Modules */
-@import 'modules/colors';
-@import 'modules/sizes';
-@import 'modules/fonts';
-@import 'modules/mixins';
+@import '@scss/modules/colors';
+@import '@scss/modules/sizes';
+@import '@scss/modules/fonts';
+@import '@scss/modules/mixins';
 
 /* Partial Files */
-@import 'partials/headings';
-@import 'partials/page-container';
+@import '@scss/partials/headings';
+@import '@scss/partials/page-container';
 
 /* Vendor Files */
-@import 'vendor/reset';
+@import '@scss/vendor/reset';

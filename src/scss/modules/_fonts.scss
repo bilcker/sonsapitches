@@ -7,8 +7,8 @@
     weight: normal;
     style: normal;
   }
-  src: url("../fonts/open-sans/OpenSans-Regular.woff2") format("woff2"),
-  url("../fonts/open-sans/OpenSans-Regular.woff") format("woff"),
-  url("../fonts/open-sans/OpenSans-Regular.ttf") format("truetype");
+  src: url("~@fonts/open-sans/OpenSans-Regular.woff2") format("woff2"),
+  url("~@fonts/open-sans/OpenSans-Regular.woff") format("woff"),
+  url("~@fonts/open-sans/OpenSans-Regular.ttf") format("truetype");
 }
 $font-family-serif: 'OpenSans';

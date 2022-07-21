@@ -5,6 +5,14 @@
   bottom: $bottom;
   left: $left;
 }
+
+@mixin flexbox ($justify: center, $align: center, $dir: row, $wrap: no-wrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-flow: $dir $wrap;
+}
+
 @mixin breakpoint($class) {
   @if $class == xs {
     @media (max-width: 767px) { @content; }

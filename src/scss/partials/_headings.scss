@@ -1,3 +1,7 @@
+@use '@scss/modules/colors';
+@use '@scss/modules/sizes';
+@use '@scss/modules/mixins';
+
 #page-container {
   h1,
   h2,
@@ -16,7 +20,7 @@
       margin-bottom: $size-base;
       overflow: hidden;
       display: block;
-      background: url(../images/sp-logo.svg) center no-repeat;
+      background: url('~@images/sp-logo.svg') center no-repeat;
 
       span {
         @include position(absolute, $left:-9999px);
