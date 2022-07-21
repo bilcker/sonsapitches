@@ -2,8 +2,7 @@ const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-// const devMode = process.env.NODE_ENV !== 'production'
+const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {
   entry: {
@@ -38,52 +37,52 @@ module.exports = {
       },
       {
         test: /\.(gif|png|jp(e*)g|svg)$/,
-        use: [{
-          loader: 'url-loader',
-          options: {
-            limit: 1000000, //Convert images < 1mb to base 64 strings
-            name: 'images/[name].[ext]'
-          }
-        }]
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name].[ext]'
+        }
       },
       {
         test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: 'fonts/[name].[ext]',
-            publicPath: '../'
-          }
-        }]
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name].[ext]',
+        }
       }
     ]
   },
   devServer: {
-    contentBase: "./dist"
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    }
   },
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@data': path.resolve(__dirname, 'src/data')
+      '@data': path.resolve(__dirname, 'src/data'),
+      '@fonts': path.resolve(__dirname, 'src/fonts'),
+      '@images': path.resolve(__dirname, 'src/images'),
+      '@scss': path.resolve(__dirname, 'src/scss'),
+      '@parts': path.resolve(__dirname, 'src/components/partials')
     },
-    extensions: ['*', '.js', '.vue', '.json']
+    extensions: ['*', '.js', '.vue', '.json', '.scss']
   },
   plugins: [
+    new VueLoaderPlugin(),
     new HtmlWebPackPlugin({
-      vue: true,
+      title: 'Sons a Pitches',
       inject: false,
       hash: true,
       template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      meta: {
+        viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+        chartset: 'utf-8'
+      }
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/style.css',
-      chunkFilename: 'css/style.css'
-    }),
-    new VueLoaderPlugin(),
-    new CopyWebpackPlugin([{
-      from: './src/images',
-      to: 'images'
-    }])
+      filename: devMode ? "css/[name].css" : "css/[name].[contenthash].css",
+      chunkFilename: devMode ? "css/[id].css" : "css/[id].[contenthash].css",
+    })
   ]
 }
