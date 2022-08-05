@@ -1,12 +1,14 @@
 /* Modules */
-@import '@scss/modules/colors';
-@import '@scss/modules/sizes';
-@import '@scss/modules/fonts';
-@import '@scss/modules/mixins';
+// @impor '@scss/modules/colors';
+// @import '@scss/modules/sizes';
+// @import '@scss/modules/fonts';
+// @import '@scss/modules/mixins';
 
-/* Partial Files */
-@import '@scss/partials/headings';
-@import '@scss/partials/page-container';
-
-/* Vendor Files */
-@import '@scss/vendor/reset';
+// /* Partial Files */
+// @import '@scss/partials/headings';
+// @import '@scss/partials/page-container';
+@use '@scss/partials/app';
+@use '@scss/partials/header';
+@use '@scss/partials/footer';
+// /* Vendor Files */
+// @import '@scss/vendor/reset';

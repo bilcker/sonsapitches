@@ -1,18 +1,3 @@
-@mixin position($position, $top:null, $right:null, $bottom: null, $left: null) {
-  position: $position;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
-}
-
-@mixin flexbox ($justify: center, $align: center, $dir: row, $wrap: no-wrap) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-  flex-flow: $dir $wrap;
-}
-
 @mixin breakpoint($class) {
   @if $class == xs {
     @media (max-width: 767px) { @content; }

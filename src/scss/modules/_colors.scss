@@ -5,3 +5,13 @@ $colour-blue: #2A5AA8;
 $colour-green: #8CFF00;
 $colour-red: #FF0000;
 $colour-yellow: #E1AD01;
+
+:root {
+  --colour-black: #{$colour-black};
+  --colour-white: #{$colour-white};
+  --colour-offwhite: #{$colour-black};
+  --colour-sp: #{$colour-blue};
+  --colour-win: #{$colour-green};
+  --colour-loss: #{$colour-red};
+  --colour-tie: #{$colour-yellow};
+}

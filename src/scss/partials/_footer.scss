@@ -1,0 +1,7 @@
+@use '@scss/modules/sizes' as *;
+
+footer {
+  color: var(--colour-white);
+  text-align: center;
+  margin: $size-xl 0 $size-base 0;
+}
