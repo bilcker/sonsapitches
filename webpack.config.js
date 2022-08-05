@@ -1,6 +1,5 @@
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const devMode = process.env.NODE_ENV !== 'production'
 
@@ -29,10 +28,9 @@ module.exports = {
         use: [
           'vue-style-loader',
           'style-loader',
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'sass-loader'
+          { loader: 'css-loader', options: { sourceMap: devMode ? true : false, importLoaders: 1 }},
+          { loader: 'postcss-loader', options: { sourceMap: devMode ? true : false }},
+          { loader: 'sass-loader', options: { sourceMap: devMode ? true : false }},
         ]
       },
       {
@@ -71,7 +69,7 @@ module.exports = {
     new VueLoaderPlugin(),
     new HtmlWebPackPlugin({
       title: 'Sons a Pitches',
-      inject: false,
+      inject: true,
       hash: true,
       template: './src/index.html',
       filename: 'index.html',
@@ -79,10 +77,6 @@ module.exports = {
         viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
         chartset: 'utf-8'
       }
-    }),
-    new MiniCssExtractPlugin({
-      filename: devMode ? "css/[name].css" : "css/[name].[contenthash].css",
-      chunkFilename: devMode ? "css/[id].css" : "css/[id].[contenthash].css",
     })
   ]
 }
