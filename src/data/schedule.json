@@ -95,9 +95,9 @@
       "location": "D2",
       "road": false,
       "opponent": "Cranks",
-      "outcome": false,
-      "score": "",
-      "played": false
+      "outcome": true,
+      "score": "26-18",
+      "played": true
     },
     {
       "month": "July",
@@ -118,8 +118,8 @@
       "road": false,
       "opponent": "Gords",
       "outcome": false,
-      "score": "",
-      "played": false
+      "score": "19-17",
+      "played": true
     },
     {
       "month": "August",
@@ -139,9 +139,9 @@
       "location": "D1",
       "road": true,
       "opponent": "Wolverines",
-      "outcome": false,
-      "score": "",
-      "played": false
+      "outcome": true,
+      "score": "16-11",
+      "played": true
     },
     {
       "month": "August",
