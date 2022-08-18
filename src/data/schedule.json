@@ -150,9 +150,9 @@
       "location": "D2",
       "road": true,
       "opponent": "Rum Runners",
-      "outcome": false,
-      "score": "",
-      "played": false
+      "outcome": true,
+      "score": "12-2",
+      "played": true
     }
   ]
 }
